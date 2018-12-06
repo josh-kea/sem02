@@ -1,0 +1,114 @@
+/* Setting the margin of the entire page to be nothing so there is now white space around */
+* {
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  /* for desktop */
+
+  /* styling each div .section class to take the full height of the viewport, throughout the document */
+  .section {
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* Navbar styling */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    z-index: 200;
+
+    /* text color */
+    color: white;
+  }
+  /* making navbar list be a flexbox */
+  nav ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  nav .logo {
+    margin: 0;
+    float: left;
+    font-size: 2rem;
+    transition: 0.3s;
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+  nav ul li a {
+  }
+
+  /*the class added when the transition happens when the page is scrolled */
+
+  nav.black {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100px;
+    padding: 10px 100px;
+  }
+
+  /* Video section styling start */
+  .video-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .section h1 {
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+    padding: 20px;
+    margin: 15px;
+    z-index: 20;
+  }
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Width of the video must fill the entire div container size from above */
+  .video-container video {
+    width: 100%;
+  }
+
+  .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Video section styling end */
+  /* Second section styling start */
+  .second-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-size: 6rem;
+  }
+
+  /* Second section styling end */
+  /* Product section styling start -- third section */
+  /*Product-section styling end -- third section */
+}
