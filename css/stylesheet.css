@@ -33,6 +33,7 @@
     margin: 0;
     padding: 0;
     display: flex;
+    font-size: 1.5rem;
   }
 
   nav .logo {
@@ -44,6 +45,12 @@
 
   nav ul li {
     list-style: none;
+    margin-right: 20px;
+    align-self: center;
+  }
+
+  .white-border {
+    border: 1px solid white;
   }
 
   nav ul li a {
@@ -53,8 +60,6 @@
 
   nav.black {
     background: rgba(0, 0, 0, 0.8);
-    height: 100px;
-    padding: 10px 100px;
   }
 
   /* Video section styling start */
@@ -110,5 +115,12 @@
 
   /* Second section styling end */
   /* Product section styling start -- third section */
+  .product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
   /*Product-section styling end -- third section */
 }
