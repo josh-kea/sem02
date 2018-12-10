@@ -18,10 +18,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 100px;
     box-sizing: border-box;
     transition: 0.3s;
     z-index: 200;
+    height: 8vh;
+    padding-top: 2vh;
+    margin: auto;
 
     /* text color */
     color: white;
@@ -33,11 +35,11 @@
     margin: 0;
     padding: 0;
     display: flex;
+
     font-size: 1.5rem;
   }
 
   nav .logo {
-    margin: 0;
     float: left;
     font-size: 2rem;
     transition: 0.3s;
@@ -51,6 +53,7 @@
 
   .white-border {
     border: 1px solid white;
+    box-sizing: border-box;
   }
 
   nav ul li a {
@@ -118,8 +121,21 @@
   .product-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .grid-item {
+    display: flex;
     align-items: center;
     justify-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   /*Product-section styling end -- third section */
