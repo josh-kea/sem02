@@ -7,6 +7,17 @@ $(window).on("scroll", function() {
   }
 });
 
+// Slideshow slick jQuery //
+$(document).ready(function() {
+  $(".slideshow").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000
+  });
+});
+
 // Rest Api //
 const baseLink = "http://joshkap.com/kimrichardt/wp-json/wp/v2/";
 
@@ -24,7 +35,7 @@ function showAll(data) {
   //data.forEach(product => {
   // Cloning the template and storing it into a constant variable called clone (to be appended later to main)
   /* const clone = listTemplate.cloneNode(true);
-    const eventName = event.title.rendered;
+    const eventName = data.title.rendered;
     const eventVenue = event.acf.venue;
     const eventDate = event.acf.date;
     const eventTime = event.acf.time;

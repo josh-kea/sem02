@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kim Richardt</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   </head>
   <body>
     <!-- Sticky Navigation bar -->
@@ -25,10 +27,12 @@
 
     <!-- Video section -->
       <div class="video-section section">
-        <h1>Kim Richardt</h1>
+
 
         <div class="video-container">
-          <div class="color-overlay"></div>
+          <h1>Kim Richardt</h1>
+          <p>Scandinavian simplicity in interior design</p>
+          <!-- <div class="color-overlay"></div> -->
         <video autoplay loop muted>
           <source src="videos/ikea.mp4" type="video/mp4">
         </video>
@@ -37,20 +41,21 @@
       <!-- Video section end -->
       <!-- Quote section start -->
       <div class="second-section section">
-        <h2>PLACEHOLDER</h2>
+        <h2>Good design is impressive, bad design is inspiring.</h2>
       </div>
       <!-- Quote section end -->
       <!-- Grid section start -->
       <div class="product-section section">
-        <div class="grid-item"><img src="images/desk.jpg" alt=""></div>
-        <div></div>
-        <div class="grid-item"><img src="images/shelf.jpg" alt=""></div>
-        <div></div>
-        <div class="grid-item"><img src="images/bed.jpg" alt=""></div>
-        <div></div>
+
       </div>
       <!-- Grid section end -->
-
+      <div class="slideshow-section section">
+        <div class="slideshow">
+          <div><img src="images/bed.jpg" alt=""><p>HELLO</p></div>
+          <div><img src="images/desk.jpg" alt=""><p>HELLO</p></div>
+          <div><img src="images/shelf.jpg" alt=""><p>HELLO</p></div>
+        </div>
+      </div>
 
 
     <main id="products"></main>
@@ -64,6 +69,7 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
