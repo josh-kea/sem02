@@ -1,7 +1,16 @@
 /* Setting the margin of the entire page to be nothing so there is now white space around */
 * {
   margin: 0;
+
+  font-family: "Open Sans", sans-serif;
 }
+
+@font-face {
+  font-family: Noto;
+  src: url(fonts/NotoSerif-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 /* for desktop */
 
@@ -163,4 +172,110 @@ nav.black {
   max-width: 100%;
   max-height: 100%;
   margin: auto;
+}
+
+/* MOBILE product information page styling start */
+#product-info-main {
+  width: 80vw;
+  overflow: hidden;
+  margin: auto;
+  display: grid;
+  font-size: 5vmin;
+  grid-row-gap: 10vmin;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title title title"
+    "dimensions dimensions collection"
+    "materials materials ."
+    "materials-images materials-images ."
+    "reseller reseller ."
+    "front-image front-image front-image"
+    "description description description"
+    "img1 img1 img1"
+    "img2 img2 img2"
+    "img3 img3 img3";
+}
+
+#product-info-main div {
+}
+
+#product-info-main .material1,
+.material2 {
+  height: 50px;
+  width: 50px;
+}
+
+#product-info-main .front {
+  height: 100%;
+  width: 100%;
+}
+
+/* giving all the divs a grid-area */
+.product-title {
+  grid-area: title;
+  padding-top: 10vmin;
+}
+
+.product-title h1 {
+  color: black;
+  font-family: Noto;
+  font-size: 10vmin;
+  font-weight: 200;
+}
+.product-year p {
+  font-size: 3vmin;
+}
+.product-dimensions {
+  grid-area: dimensions;
+}
+.product-collection {
+  grid-area: collection;
+}
+.product-materials {
+  grid-area: materials;
+}
+.product-materials-images {
+  grid-area: materials-images;
+}
+
+.product-find-reseller {
+  grid-area: reseller;
+  color: black;
+}
+.product-front-image {
+  grid-area: front-image;
+  justify-self: center;
+}
+
+.product-description {
+  grid-area: description;
+  line-height: 8vmin;
+  color: black;
+}
+
+.product-extra-img-1 {
+  grid-area: img1;
+}
+.product-extra-img-2 {
+  grid-area: img2;
+}
+.product-extra-img-3 {
+  grid-area: img3;
+}
+
+.product-extra-img-1 img,
+.product-extra-img-2 img,
+.product-extra-img-3 img {
+  height: 100%;
+  width: 100%;
+}
+
+/* setting colours of elements */
+#product-info-main {
+  color: #9d9d9d;
+}
+
+#product-info-main span {
+  color: black;
 }
