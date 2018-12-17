@@ -40,9 +40,13 @@ function showOne(product) {
   clone.querySelector(".material1").src = material1;
   clone.querySelector(".material2").src = material2;
   clone.querySelector(".front").src = frontImg;
+  //Reseller //
+  clone.querySelector(".product-find-reseller a").innerHTML = resellerName;
+  clone.querySelector(".product-find-reseller a").href = resellerLink;
+
   // TO-DO TEXT CONTENT, DIMENSIONS, 3x BOTTOM IMAGES, BACK IMAGE
 
-  console.log(material1);
+  console.log(resellerLink);
 
   // Changing the textcontent of the spans //
 

@@ -1,9 +1,9 @@
 // Stick Navbar jQuery Script //
 $(window).on("scroll", function() {
   if ($(window).scrollTop()) {
-    $("nav").addClass("black");
+    $(".nav-wrapper").addClass("black");
   } else {
-    $("nav").removeClass("black");
+    $(".nav-wrapper").removeClass("black");
   }
 });
 
@@ -16,6 +16,35 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 4000
   });
+});
+
+// Burger menu javascript //
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function burgerMenu() {
+  var productsLink = document.getElementById("products-link");
+  var aboutLink = document.getElementById("about-link");
+  var contactLink = document.getElementById("contact-link");
+  // var x = document.getElementById("myLinks");
+  if (productsLink.style.display === "block") {
+    productsLink.style.display = "none";
+    aboutLink.style.display = "none";
+    contactLink.style.display = "none";
+  } else {
+    productsLink.style.display = "block";
+    aboutLink.style.display = "block";
+    contactLink.style.display = "block";
+    /* adding transition */
+    productsLink.classList.add("smooth");
+    aboutLink.classList.add("smooth");
+    contactLink.classList.add("smooth");
+  }
+}
+// Testing on load function //
+
+$(document).ready(function() {
+  console.log("yeehaw!");
+  kimName.classList.add("smooth");
+  kimText.classList.add("smooth2");
 });
 
 // Rest Api //
