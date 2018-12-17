@@ -11,16 +11,17 @@
   <body>
     <!-- Sticky Navigation bar -->
     <div class="nav-wrapper">
-      <nav>
-          <div class="logo">LOGO</div>
-            <ul>
-              <li>NEWS</li>
-              <li>PRODUCTS</li>
-              <li>ABOUT</li>
-              <li>PARTNERS</li>
-              <li class="white-border">CONTACT</li>
-            </ul>
-      </nav>
+          <div class="logo"><img src="images/logo.png" alt=""></div>
+
+
+
+          <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+              MENU <i class="fa fa-bars"></i>
+            </a>
+            <div id="products-link"><p>PRODUCTS</p></div>
+            <div id="about-link"><p>ABOUT</p></div>
+            <div id="contact-link"><p class="white-border">CONTACT</p></div>
+            </div>
     </div>
     <!-- Sticky Navigation bar End -->
 
@@ -47,7 +48,7 @@
       crossorigin="anonymous">
     </script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/shared.js"></script>
     <script src="js/product.js"></script>
   </body>
 </html>
