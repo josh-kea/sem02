@@ -18,7 +18,7 @@
 /* styling each div .section class to take the full height of the viewport, throughout the document */
 .section {
   width: 100%;
-  height: 35vh;
+  height: 100vh;
 }
 
 /* Navbar styling */
@@ -183,10 +183,12 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80vh;
 }
 
 .second-section h2 {
-  font-size: 5vmin;
+  font-size: 10vmin;
+  margin: auto;
 }
 
 /* Second section styling end */
@@ -325,14 +327,56 @@ ul {
   color: black;
 }
 
-/* parallax effect */
+/* parallax effect on quote section*/
 .parallax {
   /* The image used */
-  background-image: url("../images/shelf.jpg");
+  background-image: url("../images/abstract-white.jpg");
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Featured product section */
+.featured-product-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+}
+/* Setting the background image to be a url, change later with JSON. */
+
+.featuredProductImage {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  grid-column: 1/4;
+}
+
+.featuredProductImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.featuredProductImage h2 {
+  position: absolute;
+  font-size: 10vmin;
+  top: 30vmin;
+  left: 5vmin;
+}
+.featuredProductImage p {
+  position: absolute;
+  font-size: 5vmin;
+  top: 45vmin;
+  left: 25vmin;
+}
+
+.featuredProductImage svg {
+  position: absolute;
+  font-size: 5vmin;
+  top: 49vmin;
+  left: 10vmin;
 }
