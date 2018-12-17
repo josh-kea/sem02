@@ -19,7 +19,7 @@ function showOne(product) {
   console.log(product);
 
   const clone = template.cloneNode(true);
-  const productName = product.title.rendered;
+  const productTitle = product.title.rendered;
   const productYear = product.acf.year;
   const productContent = product.content.rendered;
   const productCollection = product.acf.collection;
@@ -30,6 +30,17 @@ function showOne(product) {
   const resellerLink = product.acf.find_reseller_link;
   const backgroundImg = product.acf.background_image.url;
   const frontImg = product.acf.front_image.url;
+
+  clone.querySelector(".product-title h1").textContent = productTitle;
+  clone.querySelector(".product-year").textContent = productYear;
+  clone.querySelector(
+    ".product-collection span"
+  ).textContent = productCollection;
+  clone.querySelector(".product-materials span").textContent = productMaterials;
+  clone.querySelector(".material1").src = material1;
+  clone.querySelector(".material2").src = material2;
+  clone.querySelector(".front").src = frontImg;
+  // TO-DO TEXT CONTENT, DIMENSIONS, 3x BOTTOM IMAGES, BACK IMAGE
 
   console.log(material1);
 
