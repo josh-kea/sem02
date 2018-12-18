@@ -6,6 +6,9 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+}
+
 /* for desktop */
 
 /* styling each div .section class to take the full height of the viewport, throughout the document */
@@ -16,7 +19,7 @@
 
 /* Navbar styling */
 .nav-wrapper {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   z-index: 200;
   display: grid;
@@ -117,10 +120,6 @@ ul {
 }
 
 /* main grid MOBILE */
-#main-grid {
-  width: 100vw;
-  grid-template-columns: 1fr;
-}
 
 /* Video section styling start */
 .video-section {
@@ -128,6 +127,7 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
 }
 
 .video-container {
@@ -212,6 +212,7 @@ ul {
 .semi-bold {
   font-weight: 100;
   font-family: "Open Sans", sans-serif;
+  font-size: 7vmin;
 }
 
 .color-overlay-white {
@@ -246,9 +247,6 @@ ul {
     "img1 img1 img1"
     "img2 img2 img2"
     "img3 img3 img3";
-}
-
-#product-info-main div {
 }
 
 /* The div cotaining the material images */
@@ -499,7 +497,7 @@ ul {
   align-items: center;
   background-color: #dbd9d9;
   grid-row-gap: 10vmin;
-  padding-top: 10vmin;
+  padding-top: 8vmin;
   padding-bottom: 10vmin;
 }
 
@@ -519,3 +517,64 @@ ul {
 
 /* CURRENT PARTNERS SECTION END */
 /* BECOME A PRODUCER SECTION (LAST ONE) */
+.become-partner-section {
+  background-color: #f5f5f5;
+  height: auto;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact-block {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  width: 90vw;
+  border: 1px solid black;
+  height: 50vmin;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 5vmin;
+}
+.contact-block p {
+  font-size: 3vmin;
+  line-height: 7vmin;
+}
+
+.contact-block-logo-div {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid black;
+}
+
+.contact-block img {
+  height: 15vmin;
+  color: black;
+}
+
+.become-partner-section .condensed {
+  font-family: "Open Sans", sans-serif;
+  font-size: 5vmin;
+  text-align: center;
+  padding-top: 15vmin;
+  font-weight: 500;
+}
+
+.become-partner-section .noto {
+  font-family: "Noto Serif TC", serif;
+  font-size: 6vmin;
+  text-align: center;
+  padding-bottom: 15vmin;
+  font-weight: 700;
+}
+.become-partner-section i {
+  font-size: 10vmin;
+  margin-bottom: 10vmin;
+}
+
+.become-partner-section a {
+  text-decoration: none;
+  color: black;
+}
