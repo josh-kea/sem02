@@ -24,7 +24,6 @@ function showAll(data) {
   console.log(data);
   //For Each list item it will change the tags content according to the the list item's field values. //
   data.forEach(product => {
-    productCount++;
     // Cloning the template and storing it into a constant variable called clone (to be appended later to main)
     const clone = productTemplate.cloneNode(true);
     const productTitle = product.title.rendered;
@@ -43,9 +42,11 @@ function showAll(data) {
       ).textContent = productYear;
       document.querySelector(".featuredProductImage img").src = frontImg;
     } else {
+      productCount++;
       clone.querySelector("h2").textContent = productTitle;
       clone.querySelector(".product-template-div").style.backgroundImage =
         "url('" + backgroundImg + "')";
+      clone.querySelector(".product-template-div").classList.add("test");
       //* Adding the product.id parameter to the URL bar when the link box is clicked. This will fetch product details for only that productid.
       clone.querySelector("a").href = "product.html?productid=" + product.id;
       // Checking to see if there is a ticket price or door price, setting price accordingly.

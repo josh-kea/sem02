@@ -49,6 +49,8 @@
   max-height: 10vmin;
   max-width: 80%;
   transition: 0.5s;
+  /* TO FOR WEBSITE */
+  display: none;
 }
 
 /* Animation for smoothly fading in, used on burger menu expand and kims name+text loading */
@@ -149,14 +151,20 @@ ul {
   font-size: 12vmin;
   color: white;
   z-index: 20;
+  width: 80vw;
+  /* TO DO FOR WEBSITE */
+  display: none;
 }
 
 .video-container p {
   position: absolute;
   font-size: 5vmin;
-  padding-top: 20vmin;
-  color: white;
+  padding-top: 30vmin;
+  padding-rightcolor: white;
   z-index: 20;
+  width: 80vw;
+  /* TO DO FOR WEBSITE */
+  display: none;
 }
 
 /* Width of the video must fill the entire div container size from above */
@@ -164,6 +172,13 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.video-container .mobile-logo {
+  position: absolute;
+  z-index: 25;
+  height: 200px;
+  width: 200px;
 }
 
 .color-overlay {
@@ -181,14 +196,37 @@ ul {
 /* Second section styling start */
 .second-section {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 60vh;
 }
 
 .second-section h2 {
   font-size: 10vmin;
   margin: auto;
+  z-index: 11;
+  width: 70vw;
+  font-weight: 300;
+  font-family: Noto;
+}
+
+.bold {
+  font-weight: 500;
+  font-family: Noto;
+}
+
+.semi-bold {
+  font-weight: 320;
+}
+
+.color-overlay-white {
+  position: absolute;
+  background-color: white;
+  opacity: 0.8;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
 }
 
 /* Second section styling end */
@@ -316,7 +354,7 @@ ul {
 /* parallax effect on quote section*/
 .parallax {
   /* The image used */
-  background-image: url("../images/abstract-white.jpg");
+  background-image: url("../images/desk-quote.png");
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -378,12 +416,14 @@ ul {
 .product-section {
   display: grid;
   height: auto;
-  grid-template-columns: 50vw 50vw;
+  margin: auto;
+  grid-row-gap: 2vmin;
 }
 
 .product-template-div {
-  height: 30vh;
-  grid-column: 1/2;
+  height: 33.33vh;
+  width: 95vw;
+  margin: auto;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
