@@ -6,9 +6,6 @@
   font-family: "Open Sans", sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans");
-
 /* for desktop */
 
 /* styling each div .section class to take the full height of the viewport, throughout the document */
@@ -203,17 +200,18 @@ ul {
   margin: auto;
   z-index: 11;
   width: 70vw;
-  font-weight: 300;
-  font-family: "Noto Serif", serif;
+  font-weight: 200;
+  font-family: "Noto Serif TC", serif;
 }
 
 .bold {
-  font-weight: 500;
-  font-family: "Noto Serif", serif;
+  font-weight: 600;
+  font-family: "Noto Serif TC", serif;
 }
 
 .semi-bold {
-  font-weight: 320;
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif;
 }
 
 .color-overlay-white {
@@ -280,7 +278,7 @@ ul {
 
 .product-title h1 {
   color: black;
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Serif TC", serif;
   font-size: 13vmin;
   font-weight: 200;
 }
@@ -454,7 +452,8 @@ ul {
 
 .about-me-section h2 {
   font-size: 10vmin;
-  font-family: "Noto Serif", serif;
+  font-weight: 200;
+  font-family: "Noto Serif TC", serif;
   align-self: center;
 }
 
@@ -505,8 +504,9 @@ ul {
 }
 
 .current-partners-section h2 {
-  font-family: "Noto Serif", serif;
+  font-family: "Noto Serif TC", serif;
   font-size: 10vmin;
+  font-weight: 200;
 }
 
 .current-partners-section img {
@@ -516,3 +516,6 @@ ul {
 .frama-logo {
   height: 5vmin;
 }
+
+/* CURRENT PARTNERS SECTION END */
+/* BECOME A PRODUCER SECTION (LAST ONE) */
