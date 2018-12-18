@@ -6,11 +6,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-@font-face {
-  font-family: Noto;
-  src: url(fonts/NotoSerif-Regular.ttf);
-}
-
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 /* for desktop */
@@ -208,12 +204,12 @@ ul {
   z-index: 11;
   width: 70vw;
   font-weight: 300;
-  font-family: Noto;
+  font-family: "Noto Serif", serif;
 }
 
 .bold {
   font-weight: 500;
-  font-family: Noto;
+  font-family: "Noto Serif", serif;
 }
 
 .semi-bold {
@@ -284,7 +280,7 @@ ul {
 
 .product-title h1 {
   color: black;
-  font-family: Noto;
+  font-family: "Noto Serif", serif;
   font-size: 13vmin;
   font-weight: 200;
 }
@@ -447,3 +443,76 @@ ul {
 }
 
 /*Product-section styling end -- third section */
+
+/* My story section */
+.about-me-section {
+  height: auto;
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 25vmin auto auto;
+}
+
+.about-me-section h2 {
+  font-size: 10vmin;
+  font-family: "Noto Serif", serif;
+  align-self: center;
+}
+
+.about-me-img-div {
+  width: 60vw;
+}
+
+.about-me-section img {
+  width: 100%;
+}
+
+.about-me-text-div {
+  width: 80vw;
+  padding-top: 8vmin;
+  padding-bottom: 8vmin;
+}
+
+.about-me-text-div p {
+  font-size: 5vmin;
+  line-height: 8vmin;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.normal-bold {
+  font-weight: 500;
+}
+
+/* IMPORTANT - HIDING ALL MOBILE CONTENT */
+.mobile {
+  display: none;
+}
+
+/* TO DO COLLABORATING SECTION */
+
+/* Current Partners section */
+
+.current-partners-section {
+  height: auto;
+  display: grid;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+  background-color: #dbd9d9;
+  grid-row-gap: 10vmin;
+  padding-top: 10vmin;
+  padding-bottom: 10vmin;
+}
+
+.current-partners-section h2 {
+  font-family: "Noto Serif", serif;
+  font-size: 10vmin;
+}
+
+.current-partners-section img {
+  max-height: 10vmin;
+}
+
+.frama-logo {
+  height: 5vmin;
+}
