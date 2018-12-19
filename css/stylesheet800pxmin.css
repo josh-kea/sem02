@@ -265,6 +265,7 @@
     grid-area: web-images;
     display: block;
     position: relative;
+    width: 100%;
   }
   .web-product-background-image img {
     object-fit: cover;
@@ -299,13 +300,12 @@
     overflow: hidden;
     margin: auto;
     display: grid;
-    font-size: 2vmin;
-    grid-row-gap: 6vmin;
-    grid-template-columns: 0.2fr 1fr 1fr 1fr 0.5fr 2.2fr;
-    grid-template-rows: auto;
+    font-size: 2.3vmin;
+    grid-template-columns: 0.5fr 1fr 1fr 2fr 0.5fr 2.8fr;
+    grid-template-rows: 40vh 15vh 15vh 15vh 15vh auto;
     grid-template-areas:
       ". title title title . web-images"
-      ". dimensions . collection . web-images"
+      ". dimensions dimensions collection . web-images"
       ". materials materials . . web-images"
       ". materials-images materials-images . . web-images"
       ". reseller reseller . . web-images"
@@ -347,8 +347,8 @@
     font-size: 10vmin;
     font-weight: 200;
   }
-  .product-year p {
-    font-size: 3vmin;
+  .product-year {
+    font-size: 4vmin;
   }
   .product-dimensions {
     grid-area: dimensions;
@@ -392,12 +392,16 @@
 
   .product-extra-img-1 {
     grid-area: img1;
+    margin-top: 5vmin;
   }
   .product-extra-img-2 {
     grid-area: img2;
+    margin-top: 5vmin;
   }
   .product-extra-img-3 {
     grid-area: img3;
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
   }
 
   .product-extra-img-1 img,
