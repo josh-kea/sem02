@@ -243,9 +243,24 @@
 
   /* Second section styling end */
   /* web grid start */
-  .web-grid {
+  .web-product-background-image {
+    grid-area: web-background;
     width: 100%;
-    grid-template-columns: 1fr 0.5fr;
+    height: 100vh;
+    display: block;
+    position: relative;
+  }
+  .web-product-background-image img {
+    grid-area: web-background;
+    object-fit: cover;
+    height: 100%;
+    border: 1px solid red;
+    display: block;
+    position: fixed;
+  }
+
+  .product-front-image {
+    display: none;
   }
 
   /* MOBILE product information page styling start */
@@ -254,26 +269,26 @@
     overflow: hidden;
     margin: auto;
     display: grid;
-    font-size: 3vmin;
-    grid-row-gap: 10vmin;
-    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 2vmin;
+    grid-row-gap: 6vmin;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 0.5fr 3fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "title title title"
-      "dimensions . collection"
-      "materials materials ."
-      "materials-images materials-images ."
-      "reseller reseller ."
-      "front-image front-image front-image"
-      "description description description"
-      "img1 img1 img1"
-      "img2 img2 img2"
-      "img3 img3 img3";
+      ". title title title . web-background"
+      ". dimensions . collection . web-background"
+      ". materials materials . . web-background"
+      ". materials-images materials-images . . web-background"
+      ". reseller reseller . . web-background"
+      ". description description description  . ."
+      ". img1 img1 img1 . ."
+      ". img2 img2 img2 . ."
+      ". img3 img3 img3 . ."
+      "become-partner-section become-partner-section become-partner-section become-partner-section  become-partner-section . ";
   }
 
   /* The div cotaining the material images */
   .product-materials-images {
-    height: 15vmin;
+    height: 10vmin;
     width: 100%;
   }
 
@@ -299,7 +314,7 @@
   .product-title h1 {
     color: black;
     font-family: "Noto Serif TC", serif;
-    font-size: 13vmin;
+    font-size: 10vmin;
     font-weight: 200;
   }
   .product-year p {
@@ -335,7 +350,7 @@
 
   .product-description {
     grid-area: description;
-    line-height: 8vmin;
+    line-height: 4vmin;
     color: black;
   }
 
@@ -624,12 +639,15 @@
     align-items: center;
     justify-items: center;
     scroll-snap-align: start;
+    grid-area: become-partner-section;
+    border: 1px solid red;
+    width: 100%;
   }
 
   .contact-block {
     display: grid;
     grid-template-columns: 0.8fr 1fr;
-    width: 90vw;
+    width: 90%;
     border: 1px solid black;
     height: 50vmin;
     align-items: center;
@@ -678,4 +696,11 @@
   }
 
   /*Product-section styling end -- third section */
+  /* Hiding mobile version product partner */
+  .become-partner-section.mobile {
+    display: none;
+  }
+  .become-partner-section.web {
+    display: grid;
+  }
 }

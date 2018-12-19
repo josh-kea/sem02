@@ -621,3 +621,19 @@
     display: none;
   }
 }
+
+.web-product-background-image {
+  display: none;
+}
+
+.web-product-front-image {
+  display: none;
+}
+
+.become-partner-section.web {
+  display: none;
+}
+
+.become-partner-section.mobile {
+  display: block;
+}
