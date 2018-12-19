@@ -9,6 +9,8 @@ const productID = params.get("productid");
     .then(showOne);
 } */
 
+// JQUERY FOR SCROLLING ANIMATION //
+
 function loadOne() {
   fetch(baseLink + "product/" + productID + "?_embed")
     .then(e => e.json())
@@ -71,3 +73,26 @@ function showOne(product) {
 }
 
 loadOne(productID);
+
+console.log($(".web-product-front-image").show());
+
+$(window).scroll(function() {
+  console.log($(window).scrollTop());
+  console.log($(window).scrollTop() - $(window).height());
+
+  if ($(window).scrollTop() > 1) {
+    // Waiting 2seconds
+    $(".web-product-front-image").addClass("smoothOut");
+    $(".web-product-front-image").removeClass("smoothIn");
+
+    /* setTimeout(function() {
+      $(".web-product-front-image").hide();
+    }, 900);*/
+  }
+  if ($(window).scrollTop() - $(window).height() === 0 - $(window).height()) {
+    if ($(".web-product-front-image").hasClass("smoothOut")) {
+      $(".web-product-front-image").removeClass("smoothOut");
+      $(".web-product-front-image").addClass("smoothIn");
+    }
+  }
+});

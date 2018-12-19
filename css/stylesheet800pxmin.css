@@ -59,6 +59,16 @@
     }
   }
 
+  /* Fade out */
+  @keyframes smoothOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
   @keyframes slideIn {
     0% {
       transform: translateX(-10%);
@@ -68,8 +78,16 @@
     }
   }
 
+  .smoothOut {
+    animation: smoothOut 0.5s forwards;
+  }
+
+  .smoothIn {
+    animation: smooth 0.5s forwards;
+  }
+
   .smooth {
-    animation: smooth 1s linear;
+    animation: smooth 1s forwards;
   }
 
   .smooth1s {
@@ -245,8 +263,6 @@
   /* web grid start */
   .web-product-background-image {
     grid-area: web-images;
-    width: 100%;
-    height: 100vh;
     display: block;
     position: relative;
   }
@@ -261,15 +277,15 @@
   .web-product-front-image {
     z-index: 50;
     display: block;
-    left: -200px;
+    left: -22%;
+    top: 22%;
 
     position: absolute;
   }
 
   .web-product-front-image img {
     object-position: center;
-    height: 100%;
-    display: block;
+    height: 50%;
   }
 
   /* Hiding mobile ver front image */
