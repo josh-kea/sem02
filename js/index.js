@@ -41,6 +41,8 @@ function showAll(data) {
         ".featuredProductImage p span"
       ).textContent = productYear;
       document.querySelector(".featuredProductImage img").src = frontImg;
+      document.querySelector(".featuredProductImage a").href =
+        "product.html?productid=" + product.id;
     } else {
       productCount++;
       clone.querySelector("h2").textContent = productTitle;
@@ -55,5 +57,67 @@ function showAll(data) {
     console.log(productCount);
   });
 }
+
+// INDEX PAGE ONLY //
+// LOADING SLOW ANIMATIONS WITH JQUERY! WHEN SCROLLED PAST //
+
+$(".about-me-front-img-div-mobile").hide();
+$(".bold").hide();
+$(".bold2").hide();
+$(".quote-mark").hide();
+var scrollBottom = $(window).scrollTop() + $(window).height();
+
+//Loading the two bold texts in the quote 1s after each other //
+var topofQuote = $(".quote-h2").offset().top; //gets offset of header
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() + $(window).height() > topofQuote) {
+    $(".bold").show();
+    $(".bold").addClass("smooth2s");
+    // Waiting 2seconds
+    setTimeout(function() {
+      $(".bold2").show();
+      $(".bold2").addClass("smooth2s");
+      $(".quote-mark").show();
+      $(".quote-mark").addClass("smooth2s");
+    }, 2000);
+
+    console.log("LOL IT WORKED!!");
+  }
+});
+
+// KIM front image appearing when scrolled into section //
+var topofStory = $(".about-me-section").offset().top; //gets offset of header
+$(window).scroll(function() {
+  if ($(window).scrollTop() > topofStory) {
+    $(".about-me-front-img-div-mobile").show();
+    $(".about-me-front-img-div-mobile").addClass("smooth");
+    console.log("LOL IT WORKED!!");
+  }
+});
+
+// CURRENT PARTNERS SLOW LOADING WHEN SCROLLED //
+$(".gestalten-logo").hide();
+$(".illum-logo").hide();
+$(".frama-logo").hide();
+var topofPartners = $(".become-partner-section").offset().top; //gets offset of header
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() + $(window).height() > topofPartners) {
+    $(".gestalten-logo").show();
+    $(".gestalten-logo").addClass("smooth1s");
+    // Waiting 2seconds
+    setTimeout(function() {
+      $(".illum-logo").show();
+      $(".illum-logo").addClass("smooth1s");
+    }, 1000);
+    setTimeout(function() {
+      $(".frama-logo").show();
+      $(".frama-logo").addClass("smooth1s");
+    }, 2000);
+
+    console.log("LOL IT WORKED!!");
+  }
+});
 
 loadAll();

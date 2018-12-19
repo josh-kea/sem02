@@ -5,29 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kim Richardt</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet800pxmin.css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    </head>
   <body>
     <!-- Sticky Navigation bar -->
     <div class="nav-wrapper">
-          <div class="logo"><img src="images/logo.png" alt=""></div>
 
 
 
+        <div id="products-link"><p>PRODUCTS</p></div>
+        <div id="about-link"><p>ABOUT</p></div>
+        <div id="contact-link"><p class="white-border">CONTACT</p></div>
           <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
-              MENU <i class="fa fa-bars"></i>
+              <i class="fa fa-bars"></i>
             </a>
-            <div id="products-link"><p>PRODUCTS</p></div>
-            <div id="about-link"><p>ABOUT</p></div>
-            <div id="contact-link"><p class="white-border">CONTACT</p></div>
+
+
             </div>
     </div>
     <!-- Sticky Navigation bar End -->
-
+<div class="web-grid">
 <!-- Product info start -->
     <main id="product-info-main"></main>
     <template id="product-info-template">
@@ -54,9 +57,10 @@
         0045-26169901</p>
 
     </div>
-    <a href="https://www.instagram.com/kim.richardt/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div> 
+    <!-- <a href="https://www.instagram.com/kim.richardt/" target="_blank"><i class="fab fa-instagram"></i></a> -->
 
-    </div>
+    </div> <!-- web-grid end -->
     <!-- Become a producer section end -->
 
     <!-- importing jQuery -->

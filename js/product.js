@@ -21,7 +21,7 @@ function showOne(product) {
   const clone = template.cloneNode(true);
   const productTitle = product.title.rendered;
   const productYear = product.acf.year;
-  const productContent = product.content.rendered;
+
   const productCollection = product.acf.collection;
   const productMaterials = product.acf.materials;
   const material1 = product.acf.material_image1.url;
@@ -30,6 +30,13 @@ function showOne(product) {
   const resellerLink = product.acf.find_reseller_link;
   const backgroundImg = product.acf.background_image.url;
   const frontImg = product.acf.front_image.url;
+
+  // DOING //
+  const productDimensions = product.acf.dimensions;
+  const productContent = product.content.rendered;
+  const bottomImg1 = product.acf.bottom_image_1.url;
+  const bottomImg2 = product.acf.bottom_image_2.url;
+  const bottomImg3 = product.acf.bottom_image_3.url;
 
   clone.querySelector(".product-title h1").textContent = productTitle;
   clone.querySelector(".product-year").textContent = productYear;
@@ -44,11 +51,17 @@ function showOne(product) {
   clone.querySelector(".product-find-reseller a").innerHTML = resellerName;
   clone.querySelector(".product-find-reseller a").href = resellerLink;
 
-  // TO-DO TEXT CONTENT, DIMENSIONS, 3x BOTTOM IMAGES, BACK IMAGE
-
-  console.log(resellerLink);
-
-  // Changing the textcontent of the spans //
+  // DOING TEXT CONTENT, DIMENSIONS, 3x BOTTOM IMAGES, BACK IMAGE
+  clone.querySelector(
+    ".product-dimensions span"
+  ).textContent = productDimensions;
+  // InnerHTML of the text area //
+  // Remember to add margin if more than 2 paragraphs //
+  clone.querySelector(".product-description").innerHTML = productContent;
+  // Bottom Images
+  clone.querySelector(".product-extra-img-1 img").src = bottomImg1;
+  clone.querySelector(".product-extra-img-2 img").src = bottomImg2;
+  clone.querySelector(".product-extra-img-3 img").src = bottomImg3;
 
   document.querySelector("main").appendChild(clone);
 }
