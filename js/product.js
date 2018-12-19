@@ -63,6 +63,10 @@ function showOne(product) {
   clone.querySelector(".product-extra-img-2 img").src = bottomImg2;
   clone.querySelector(".product-extra-img-3 img").src = bottomImg3;
 
+  // Web Version Setting Front + Back Images
+  clone.querySelector(".web-product-background-image img").src = backgroundImg;
+  clone.querySelector(".web-product-front-image img").src = frontImg;
+
   document.querySelector("main").appendChild(clone);
 }
 

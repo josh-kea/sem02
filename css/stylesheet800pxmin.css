@@ -259,6 +259,10 @@
     position: fixed;
   }
 
+  .web-product-front-image {
+    height: ;
+  }
+
   .product-front-image {
     display: none;
   }
