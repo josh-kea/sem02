@@ -23,7 +23,8 @@
     scroll-snap-align: start;
   }
 
-  /* Navbar styling */
+  /* Navbar styling
+
   .nav-wrapper {
     width: 100%;
     position: fixed;
@@ -36,7 +37,7 @@
     justify-items: center;
     align-items: center;
   }
-  /* HIDE ON WEB */
+
   .icon {
     font-size: 3vmin;
     color: gray;
@@ -47,6 +48,8 @@
 
   .burger {
   }
+
+  */
 
   /* Animation for smoothly fading in, used on burger menu expand and kims name+text loading */
 
@@ -110,20 +113,67 @@
     animation: smooth 1.5s linear;
   }
 
+  .nav-wrapper {
+    width: 100%;
+    column-gap: 2vmin;
+    position: absolute;
+    padding-top: 3vmin;
+    z-index: 200;
+    display: grid;
+    grid-template-columns: 2fr 0.4fr 0.4fr 0.4fr;
+    grid-template-rows: 6vh;
+
+    align-items: center;
+
+    /* the rest of your styling */
+  }
+
+  .icon {
+    font-size: 3vmin;
+    color: gray;
+    text-decoration: none;
+    grid-column: 4/4;
+    display: none;
+  }
+
+  .burger {
+  }
+
+  .logo img {
+    max-height: 10vmin;
+    max-width: 80%;
+    transition: 0.5s;
+    /* TO FOR WEBSITE */
+    display: none;
+  }
+
   #products-link,
   #about-link,
   #contact-link {
     transition: 0.2s;
     display: block;
+    text-align: center;
+  }
+
+  #products-link {
+    grid-column: 2/2;
   }
 
   #products-link p,
   #about-link p,
   #contact-link p {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 100;
     font-size: 3vmin;
+    width: 20vmin;
+    letter-spacing: 2px;
     color: white;
-    padding-left: 5vmin;
-    padding-right: 5vmin;
+    cursor: pointer;
+  }
+  #products-link p:hover,
+  #about-link p:hover,
+  #contact-link p:hover {
+    color: #b2b0a9;
   }
 
   ul {
@@ -131,7 +181,6 @@
 
   .nav-wrapper i {
     font-size: 3vmin;
-    padding-left: 7vmin;
   }
 
   .white-border {
@@ -140,11 +189,6 @@
   }
 
   /*the class added when the transition happens when the page is scrolled */
-
-  .nav-wrapper.black {
-    transition: 0.2s;
-    background-color: #dbd9d9;
-  }
 
   /* main grid MOBILE */
 
@@ -735,5 +779,28 @@
   }
   .become-partner-section.web {
     display: grid;
+  }
+
+  /* Scroll to top button */
+  .scroll-to-top-button {
+    position: fixed;
+    z-index: 500;
+    top: 93vh;
+    left: 94vw;
+    height: 5vh;
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scroll-to-top-button i {
+    color: black;
+    font-size: 5vmin;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  .scroll-to-top-button i:hover {
+    font-size: 5.5vmin;
+    transition: 0.3s;
   }
 }

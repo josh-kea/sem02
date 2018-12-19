@@ -30,3 +30,54 @@ function burgerMenu() {
     $(".black").addClass("smooth");
   }
 }
+// Hover function
+$("#products-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#1").offset().top
+    },
+    500
+  );
+});
+$("#about-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#2").offset().top
+    },
+    500
+  );
+});
+$("#contact-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#3").offset().top
+    },
+    500
+  );
+});
+
+$(".scroll-to-top-button").hide();
+
+$(".scroll-to-top-button").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: 0
+    },
+    700
+  );
+});
+
+// Scroll to top button appearing and dissapearing //
+$(window).scroll(function() {
+  console.log($(window).scrollTop());
+  console.log($(window).scrollTop() - $(window).height());
+
+  if ($(window).scrollTop() > 1) {
+    // Waiting 2seconds
+    $(".scroll-to-top-button").addClass("smoothIn");
+    $(".scroll-to-top-button").show();
+  }
+  if ($(window).scrollTop() - $(window).height() === 0 - $(window).height()) {
+    $(".scroll-to-top-button").hide();
+  }
+});
