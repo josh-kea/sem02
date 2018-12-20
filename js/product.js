@@ -96,3 +96,23 @@ $(window).scroll(function() {
     }
   }
 });
+
+$("#products-link").click(function() {
+  window.location.href = "index.html#1";
+});
+$("#about-link").click(function() {
+  window.location.href = "index.html#2";
+});
+
+$("#contact-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#3").offset().top
+    },
+    900
+  );
+});
+
+$("#home-link").click(function() {
+  window.location.href = "index.html";
+});

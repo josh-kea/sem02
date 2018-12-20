@@ -164,3 +164,30 @@ $(".featured-product-grid span").click(function() {
     500
   );
 });
+
+// Section linking
+// Hover function
+$("#products-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#1").offset().top
+    },
+    500
+  );
+});
+$("#about-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#2").offset().top
+    },
+    700
+  );
+});
+$("#contact-link").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#3").offset().top
+    },
+    900
+  );
+});

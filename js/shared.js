@@ -30,31 +30,6 @@ function burgerMenu() {
     $(".black").addClass("smooth");
   }
 }
-// Hover function
-$("#products-link").click(function() {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#1").offset().top
-    },
-    500
-  );
-});
-$("#about-link").click(function() {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#2").offset().top
-    },
-    100
-  );
-});
-$("#contact-link").click(function() {
-  $([document.documentElement, document.body]).animate(
-    {
-      scrollTop: $("#3").offset().top
-    },
-    1500
-  );
-});
 
 $(".scroll-to-top-button").hide();
 
