@@ -113,6 +113,10 @@ $("#contact-link").click(function() {
   );
 });
 
+$("#home-link").hide();
+
 $("#home-link").click(function() {
   window.location.href = "index.html";
 });
+
+// Home page link initial hide //

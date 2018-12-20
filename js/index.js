@@ -1,11 +1,3 @@
-// Testing on load function //
-
-$(document).ready(function() {
-  console.log("yeehaw!");
-  kimName.classList.add("smooth");
-  kimText.classList.add("smooth2");
-});
-
 // Rest Api //
 
 // Function, called later, to load all of the products post type in wordpress backend //
@@ -30,19 +22,19 @@ function showAll(data) {
     const backgroundImg = product.acf.background_image.url;
     const productYear = product.acf.year;
     const frontImg = product.acf.front_image.url;
+    const featuredVideo = product.acf.featured_video_link;
+    console.log(featuredVideo);
 
     // Testing if the product is set to featured product in wordpress. If so it'll change the static featured product section accordingly //
     if (product.acf.featured_product === "Yes") {
       console.log("yes worked once");
-      document.querySelector(
-        ".featuredProductImage h2"
-      ).textContent = productTitle;
-      document.querySelector(
-        ".featuredProductImage p span"
-      ).textContent = productYear;
-      document.querySelector(".featuredProductImage img").src = frontImg;
-      document.querySelector(".featuredProductImage a").href =
-        "product.html?productid=" + product.id;
+
+      document.querySelector(".featured-product-back img").src =
+        product.acf.featured_back_image.url;
+      document.querySelector(".featured-product-front img").src =
+        product.acf.featured_front_image.url;
+      document.querySelector("#video").src =
+        product.acf.featured_video_link.url;
     } else {
       productCount++;
       clone.querySelector("h2").textContent = productTitle;
@@ -191,3 +183,5 @@ $("#contact-link").click(function() {
     900
   );
 });
+
+$("#home-link").remove();
