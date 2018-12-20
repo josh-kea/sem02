@@ -44,7 +44,7 @@ $("#about-link").click(function() {
     {
       scrollTop: $("#2").offset().top
     },
-    500
+    100
   );
 });
 $("#contact-link").click(function() {
@@ -52,7 +52,7 @@ $("#contact-link").click(function() {
     {
       scrollTop: $("#3").offset().top
     },
-    500
+    1500
   );
 });
 

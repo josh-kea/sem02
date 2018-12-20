@@ -61,7 +61,6 @@ function showAll(data) {
 // INDEX PAGE ONLY //
 // LOADING SLOW ANIMATIONS WITH JQUERY! WHEN SCROLLED PAST //
 
-$(".about-me-front-img-div-mobile").hide();
 $(".bold").hide();
 $(".bold2").hide();
 $(".quote-mark").hide();
@@ -86,13 +85,14 @@ $(window).scroll(function() {
   }
 });
 
+$(".about-me-front-img-div-mobile").hide();
+
 // KIM front image appearing when scrolled into section //
 var topofStory = $(".about-me-section").offset().top; //gets offset of header
 $(window).scroll(function() {
   if ($(window).scrollTop() > topofStory) {
     $(".about-me-front-img-div-mobile").show();
     $(".about-me-front-img-div-mobile").addClass("smooth");
-    console.log("LOL IT WORKED!!");
   }
 });
 
@@ -115,9 +115,52 @@ $(window).scroll(function() {
       $(".frama-logo").show();
       $(".frama-logo").addClass("smooth1s");
     }, 2000);
-
-    console.log("LOL IT WORKED!!");
   }
 });
 
 loadAll();
+
+$(".featured-product-front").hide();
+
+// KIM front image appearing when scrolled into section //
+var topofFeatured = $(".featured-product-video-section").offset().top; //gets offset of header
+$(window).scroll(function() {
+  if ($(window).scrollTop() > topofFeatured) {
+    $(".featured-product-front").show();
+    $(".featured-product-front").addClass("smooth");
+  }
+});
+
+// Floating Image with mouse function //
+
+/*
+
+var float1 = $("#float-img-1");
+var float2 = $("#float-img-2");
+
+$(".second-section").mousemove(function(e) {
+  var valueX = (e.pageX * 1) / 50;
+  var valueY = (e.pageY * 1) / 50;
+  float1.css({
+    transform: "translate3d(" + valueX + "px," + valueY + "px,0)"
+  });
+});
+
+$(".featured-product-video-section").mousemove(function(e) {
+  var valueX = (e.pageX * 1) / 200;
+  var valueY = (e.pageY * 1) / 200;
+  float2.css({
+    transform: "translate3d(" + valueX + "px," + valueY + "px,0)"
+  });
+});
+
+*/
+
+$(".featured-product-grid span").click(function() {
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#3").offset().top
+    },
+    500
+  );
+});

@@ -380,8 +380,9 @@
   /* Featured product section */
   .featured-product-section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 50vh;
+    height: 50vh;
     position: relative;
   }
 
@@ -398,7 +399,8 @@
     height: 100%;
     width: 100%;
     position: relative;
-    grid-column: 1/4;
+    grid-column: 1;
+    grid-row: 1;
   }
 
   .featuredProductImage img {
