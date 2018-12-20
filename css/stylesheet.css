@@ -24,7 +24,7 @@
     z-index: 200;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 8vh;
+    grid-template-rows: 10vmin;
 
     color: gray;
     justify-items: center;
@@ -109,6 +109,17 @@
   #contact-link p {
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  #products-link {
+    grid-column: 2/2;
+  }
+
+  #about-link {
+    grid-column: 3/3;
+  }
+  #contact-link {
+    grid-column: 4/4;
   }
 
   ul {
@@ -761,6 +772,7 @@
   font-size: 2vmin;
   cursor: pointer;
   width: 100%;
+  display: none;
 }
 
 #home-link i {

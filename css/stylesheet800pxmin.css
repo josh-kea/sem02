@@ -869,9 +869,9 @@
 
   #home-link {
     color: black;
-    margin-left: 2vmin;
     cursor: pointer;
     opacity: 0.4;
+    display: block;
   }
 
   #home-link i {
